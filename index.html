@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <main id="container" class="container">
+      <div class="game-scores">
+        <h1>Twoje Wyniki</h1>
+        <h2 id="storage-scores"></h2>
+      </div>
+      <div class="correct-anwsers">
+        
+        <h1>Wszystkie poprawne odpowiedzi zostały oczywiście wybrane wraz z moim poczuciem humoru lub jego brakiem. <br> Wszysktie skargi i zażalenia proszę kierować na adres mailowy suchyQuiz@gmail.com
+        <div class="answer">
+          <h1>Który żart jest najśmieszniejszy:</h1>
+          <h2>
+            Wczoraj śmialiśmy się z dziadkiem do utraty tchu -Dziadek wygrał.
+          </h2>
+        </div>
+        <div class="answer">
+          <h1>Który żart jest najsuchszy:</h1>
+          <h2>Jak informatyk chroni się przed koronawirusem -Antywirusem</h2>
+        </div>
+        <div class="answer">
+          <h1>Który żart jest najbardziej zły:</h1>
+          <h2>Co jest małe czerwone i puka w szybkę? -Dziecko w piekarniku</h2>
+        </div>
+        <div class="answer">
+          <h1>Który żart jest najgorszy:</h1>
+          <h2>Jak nazywa się wóz, w którym jeździ radio? -Radiowóz</h2>
+        </div>
+        <button class="restart-button">Zacznij quiz od nowa</button>
+      </div>
+      <div class="score-screen" id="score-screen">
+        <h1 class="score-element">
+          Gratulacje, świetnie ci poszło <br />
+          twój wynik to:
+        </h1>
+        <h2 id="quiz-score"></h2>
+        <button class="score-element" id="check-btn">
+          Zobacz poprawne odpowiedzi
+        </button>
+      </div>
+      <div id="card" class="card">
+        <h1 class="card-title">Suchy Quiz</h1>
+        <div class="card-quiz">
+          <h2 class="quiz-title card-element">
+            Quiz o najlepszych i najzabawniejszych żartach
+          </h2>
+          <p class="card-element">Baw się dobrze hehe !!</p>
+
+          <button id="btn-start">Zacznij Quiz</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

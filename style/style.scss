@@ -1,0 +1,142 @@
+@mixin quizButton {
+  margin: 5%;
+  border-radius: 15px;
+  padding: 20px;
+  border-style: solid;
+  border-color: rgb(142, 187, 212);
+  &:hover {
+    border-color: rgb(11, 92, 139);
+  }
+}
+
+@mixin quizCard {
+  color: rgb(11, 92, 139);
+  border: 3px;
+  border-style: solid;
+  border-color: rgb(11, 92, 139);
+  background-color: rgb(142, 187, 212);
+  border-radius: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+button {
+  border: none;
+  background-color: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(195, 218, 231);
+  justify-content: center;
+
+  .correct-anwsers {
+    display: none;
+    align-items: center;
+    width: 50%;
+    height: 30%;
+    font-size: 50%;
+
+    .answer {
+      @include quizCard();
+      margin: 15px;
+      padding: 10px;
+    }
+    .restart-button {
+      @include quizButton();
+    }
+  }
+
+  .score-screen {
+    text-align: center;
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    @include quizCard();
+    .score-element {
+      padding: 3%;
+      margin: 3%;
+    }
+    #check-btn {
+      margin-bottom: 30px;
+      border-radius: 999px;
+      @include quizButton();
+    }
+  }
+
+  .card {
+    @include quizCard();
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .card-title {
+      padding: 5%;
+    }
+
+    .card-quiz {
+      .card-element {
+        padding: 10%;
+      }
+
+      #btn-start {
+        @include quizButton();
+        margin-bottom: 30px;
+        border-radius: 999px;
+      }
+    }
+  }
+
+  .container-question {
+    @include quizCard();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .boxes {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .box {
+        @include quizButton();
+      }
+    }
+    .nav-buttons {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 78%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .nav-buttons button {
+      @include quizButton();
+    }
+
+    .end-button {
+      @include quizButton();
+      margin: 1%;
+    }
+  }
+}
