@@ -47,14 +47,20 @@ button {
   justify-content: center;
 
   .correct-anwsers {
+    height: 80%;
+    padding: 20px;
+    @include quizCard();
     display: none;
+    color: white;
+    flex-direction: column;
     align-items: center;
     width: 50%;
-    height: 30%;
-    font-size: 50%;
-
     .answer {
       @include quizCard();
+      color: white;
+      font-size: 50%;
+      width: 80%;
+      height: 50%;
       margin: 15px;
       padding: 10px;
     }
@@ -137,6 +143,66 @@ button {
     .end-button {
       @include quizButton();
       margin: 1%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(195, 218, 231);
+    justify-content: center;
+
+    .correct-anwsers {
+      margin: 20px;
+      height: 100%;
+      padding: 20px;
+      @include quizCard();
+      display: none;
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .answer {
+        @include quizCard();
+        color: white;
+        font-size: 50%;
+        width: 100%;
+        height: 50%;
+        margin: 15px;
+        padding: 10px;
+      }
+      .restart-button {
+        @include quizButton();
+      }
+    }
+    .container-question {
+      @include quizCard();
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .boxes {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .box {
+          @include quizButton();
+        }
+      }
+      .nav-buttons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 86%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
